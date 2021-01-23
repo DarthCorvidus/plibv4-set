@@ -1,0 +1,10 @@
+plibv4/Set - A wrapper for an array int, float or string values that are unique.
+
+Set servers as a small wrapper to an array and array_unique. There are three
+implementation so far - SetInt, SetFloat and SetString, to circumvent PHP's
+traditional leniency on types which may produce unwanted behavior for functions
+such as array_unique.
+
+Typical uses I had were database queries for which I wanted to have a set of
+unique values for each or one column, in order not to have to do a separate
+SELECT DISTINCT query on each column too.
